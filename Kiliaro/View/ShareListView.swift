@@ -20,6 +20,11 @@ class ShareListView: BaseViewController, View {
         return tableView
     }()
     
+    override func configViewController() {
+        super.configViewController()
+        title = viewModel.getTitle()
+    }
+    
     override func addSubviews() {
         view.addSubview(shareTable)
     }

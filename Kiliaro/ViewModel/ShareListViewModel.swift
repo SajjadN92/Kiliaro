@@ -25,6 +25,10 @@ class ShareListViewModel: ViewModel {
         return config
     }
     
+    func getTitle() -> String {
+        return "shared_items".localized.uppercased()
+    }
+    
     func tableRowSelected(at index: Int) {
         
     }
