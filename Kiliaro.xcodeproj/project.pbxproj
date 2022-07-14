@@ -17,6 +17,9 @@
 		B44F449C28806A12008F24C9 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F449B28806A12008F24C9 /* View.swift */; };
 		B44F44A028806A50008F24C9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F449F28806A50008F24C9 /* ViewModel.swift */; };
 		B44F44A328806AF2008F24C9 /* ShareListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F44A228806AF2008F24C9 /* ShareListViewModel.swift */; };
+		B44F44A528808C6F008F24C9 /* ShareListView+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F44A428808C6F008F24C9 /* ShareListView+Delegate.swift */; };
+		B44F44A728808C81008F24C9 /* ShareListView+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F44A628808C81008F24C9 /* ShareListView+DataSource.swift */; };
+		B44F44A928808EDE008F24C9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F44A828808EDE008F24C9 /* Extensions.swift */; };
 		B4E471CB2880420B00CAE4B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471CA2880420B00CAE4B8 /* AppDelegate.swift */; };
 		B4E471CD2880420B00CAE4B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471CC2880420B00CAE4B8 /* SceneDelegate.swift */; };
 		B4E471D42880420C00CAE4B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E471D32880420C00CAE4B8 /* Assets.xcassets */; };
@@ -57,6 +60,9 @@
 		B44F449B28806A12008F24C9 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		B44F449F28806A50008F24C9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B44F44A228806AF2008F24C9 /* ShareListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareListViewModel.swift; sourceTree = "<group>"; };
+		B44F44A428808C6F008F24C9 /* ShareListView+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShareListView+Delegate.swift"; sourceTree = "<group>"; };
+		B44F44A628808C81008F24C9 /* ShareListView+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShareListView+DataSource.swift"; sourceTree = "<group>"; };
+		B44F44A828808EDE008F24C9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B4E471C72880420B00CAE4B8 /* Kiliaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiliaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E471CA2880420B00CAE4B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4E471CC2880420B00CAE4B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				B44F448E288063A3008F24C9 /* ShareListView.swift */,
+				B44F44A428808C6F008F24C9 /* ShareListView+Delegate.swift */,
+				B44F44A628808C81008F24C9 /* ShareListView+DataSource.swift */,
 				B44F448828805CA1008F24C9 /* Base */,
 			);
 			path = View;
@@ -239,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				B4E4720428804EAD00CAE4B8 /* BuildConfigs.swift */,
+				B44F44A828808EDE008F24C9 /* Extensions.swift */,
 				B44F4492288066F3008F24C9 /* Theme */,
 			);
 			path = Utils;
@@ -375,12 +384,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B44F448F288063A3008F24C9 /* ShareListView.swift in Sources */,
+				B44F44A928808EDE008F24C9 /* Extensions.swift in Sources */,
 				B4E471FC2880444200CAE4B8 /* Coordinator.swift in Sources */,
 				B44F449C28806A12008F24C9 /* View.swift in Sources */,
 				B44F44A328806AF2008F24C9 /* ShareListViewModel.swift in Sources */,
+				B44F44A728808C81008F24C9 /* ShareListView+DataSource.swift in Sources */,
 				B44F4491288063BC008F24C9 /* BaseViewController.swift in Sources */,
 				B44F4498288067F1008F24C9 /* DefaultTheme.swift in Sources */,
 				B44F448A28805CAF008F24C9 /* BaseNavigation.swift in Sources */,
+				B44F44A528808C6F008F24C9 /* ShareListView+Delegate.swift in Sources */,
 				B44F44A028806A50008F24C9 /* ViewModel.swift in Sources */,
 				B4E471FE2880496500CAE4B8 /* AppCoordinator.swift in Sources */,
 				B4E471CB2880420B00CAE4B8 /* AppDelegate.swift in Sources */,

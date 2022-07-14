@@ -16,7 +16,8 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let shareList = ShareListView()
+        let viewModel = ShareListViewModel()
+        let shareList = ShareListView(viewModel: viewModel)
         let navigation = BaseNavigation(rootViewController: shareList)
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
