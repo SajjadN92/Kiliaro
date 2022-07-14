@@ -1,0 +1,12 @@
+//
+//  Kiliaro-release.xcconfig
+//  Kiliaro
+//
+//  Created by Sajjad Najafi on 7/14/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+URL_SCHEME = https:/
+BASE_URL = $(URL_SCHEME)/api1.kiliaro.com/

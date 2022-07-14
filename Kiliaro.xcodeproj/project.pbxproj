@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B44F448A28805CAF008F24C9 /* BaseNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F448928805CAF008F24C9 /* BaseNavigation.swift */; };
+		B44F448D28805FAA008F24C9 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F448C28805FAA008F24C9 /* Media.swift */; };
+		B44F448F288063A3008F24C9 /* ShareListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F448E288063A3008F24C9 /* ShareListView.swift */; };
+		B44F4491288063BC008F24C9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F4490288063BC008F24C9 /* BaseViewController.swift */; };
+		B44F449428806703008F24C9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F449328806703008F24C9 /* Theme.swift */; };
+		B44F4498288067F1008F24C9 /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F4497288067F1008F24C9 /* DefaultTheme.swift */; };
+		B44F449A28806889008F24C9 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F449928806888008F24C9 /* ThemeManager.swift */; };
+		B44F449C28806A12008F24C9 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F449B28806A12008F24C9 /* View.swift */; };
+		B44F44A028806A50008F24C9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F449F28806A50008F24C9 /* ViewModel.swift */; };
+		B44F44A328806AF2008F24C9 /* ShareListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F44A228806AF2008F24C9 /* ShareListViewModel.swift */; };
 		B4E471CB2880420B00CAE4B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471CA2880420B00CAE4B8 /* AppDelegate.swift */; };
 		B4E471CD2880420B00CAE4B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471CC2880420B00CAE4B8 /* SceneDelegate.swift */; };
-		B4E471CF2880420B00CAE4B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471CE2880420B00CAE4B8 /* ViewController.swift */; };
-		B4E471D22880420B00CAE4B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E471D02880420B00CAE4B8 /* Main.storyboard */; };
 		B4E471D42880420C00CAE4B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E471D32880420C00CAE4B8 /* Assets.xcassets */; };
 		B4E471D72880420C00CAE4B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E471D52880420C00CAE4B8 /* LaunchScreen.storyboard */; };
 		B4E471E22880420D00CAE4B8 /* KiliaroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471E12880420D00CAE4B8 /* KiliaroTests.swift */; };
 		B4E471EC2880420D00CAE4B8 /* KiliaroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471EB2880420D00CAE4B8 /* KiliaroUITests.swift */; };
 		B4E471EE2880420D00CAE4B8 /* KiliaroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471ED2880420D00CAE4B8 /* KiliaroUITestsLaunchTests.swift */; };
+		B4E471FC2880444200CAE4B8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471FB2880444200CAE4B8 /* Coordinator.swift */; };
+		B4E471FE2880496500CAE4B8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471FD2880496500CAE4B8 /* AppCoordinator.swift */; };
+		B4E4720528804EAD00CAE4B8 /* BuildConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4720428804EAD00CAE4B8 /* BuildConfigs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +47,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B44F448928805CAF008F24C9 /* BaseNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigation.swift; sourceTree = "<group>"; };
+		B44F448C28805FAA008F24C9 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		B44F448E288063A3008F24C9 /* ShareListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareListView.swift; sourceTree = "<group>"; };
+		B44F4490288063BC008F24C9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B44F449328806703008F24C9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B44F4497288067F1008F24C9 /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
+		B44F449928806888008F24C9 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		B44F449B28806A12008F24C9 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		B44F449F28806A50008F24C9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		B44F44A228806AF2008F24C9 /* ShareListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareListViewModel.swift; sourceTree = "<group>"; };
 		B4E471C72880420B00CAE4B8 /* Kiliaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiliaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E471CA2880420B00CAE4B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4E471CC2880420B00CAE4B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B4E471CE2880420B00CAE4B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B4E471D12880420B00CAE4B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4E471D32880420C00CAE4B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4E471D62880420C00CAE4B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4E471D82880420C00CAE4B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +68,11 @@
 		B4E471E72880420D00CAE4B8 /* KiliaroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiliaroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E471EB2880420D00CAE4B8 /* KiliaroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiliaroUITests.swift; sourceTree = "<group>"; };
 		B4E471ED2880420D00CAE4B8 /* KiliaroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiliaroUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B4E471FB2880444200CAE4B8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B4E471FD2880496500CAE4B8 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B4E4720428804EAD00CAE4B8 /* BuildConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfigs.swift; sourceTree = "<group>"; };
+		B4E4720628804F0200CAE4B8 /* Kiliaro-debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Kiliaro-debug.xcconfig"; sourceTree = "<group>"; };
+		B4E4720728804F0E00CAE4B8 /* Kiliaro-release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Kiliaro-release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +100,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B44F448728805C99008F24C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B44F448E288063A3008F24C9 /* ShareListView.swift */,
+				B44F448828805CA1008F24C9 /* Base */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B44F448828805CA1008F24C9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B44F448928805CAF008F24C9 /* BaseNavigation.swift */,
+				B44F4490288063BC008F24C9 /* BaseViewController.swift */,
+				B44F449B28806A12008F24C9 /* View.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B44F448B28805F26008F24C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B44F448C28805FAA008F24C9 /* Media.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B44F4492288066F3008F24C9 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				B44F449328806703008F24C9 /* Theme.swift */,
+				B44F4497288067F1008F24C9 /* DefaultTheme.swift */,
+				B44F449928806888008F24C9 /* ThemeManager.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		B44F449D28806A1F008F24C9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B44F44A228806AF2008F24C9 /* ShareListViewModel.swift */,
+				B44F449E28806A3C008F24C9 /* Base */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B44F449E28806A3C008F24C9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B44F449F28806A50008F24C9 /* ViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		B4E471BE2880420B00CAE4B8 = {
 			isa = PBXGroup;
 			children = (
 				B4E471C92880420B00CAE4B8 /* Kiliaro */,
+				B44F448B28805F26008F24C9 /* Model */,
 				B4E471E02880420D00CAE4B8 /* KiliaroTests */,
 				B4E471EA2880420D00CAE4B8 /* KiliaroUITests */,
 				B4E471C82880420B00CAE4B8 /* Products */,
@@ -99,13 +178,12 @@
 		B4E471C92880420B00CAE4B8 /* Kiliaro */ = {
 			isa = PBXGroup;
 			children = (
-				B4E471CA2880420B00CAE4B8 /* AppDelegate.swift */,
-				B4E471CC2880420B00CAE4B8 /* SceneDelegate.swift */,
-				B4E471CE2880420B00CAE4B8 /* ViewController.swift */,
-				B4E471D02880420B00CAE4B8 /* Main.storyboard */,
-				B4E471D32880420C00CAE4B8 /* Assets.xcassets */,
-				B4E471D52880420C00CAE4B8 /* LaunchScreen.storyboard */,
-				B4E471D82880420C00CAE4B8 /* Info.plist */,
+				B4E4720128804AFB00CAE4B8 /* Resources */,
+				B4E4720028804AC200CAE4B8 /* Application */,
+				B4E471FA2880442900CAE4B8 /* Coordinator */,
+				B4E4720328804E9400CAE4B8 /* Utils */,
+				B44F448728805C99008F24C9 /* View */,
+				B44F449D28806A1F008F24C9 /* ViewModel */,
 			);
 			path = Kiliaro;
 			sourceTree = "<group>";
@@ -125,6 +203,45 @@
 				B4E471ED2880420D00CAE4B8 /* KiliaroUITestsLaunchTests.swift */,
 			);
 			path = KiliaroUITests;
+			sourceTree = "<group>";
+		};
+		B4E471FA2880442900CAE4B8 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B4E471FB2880444200CAE4B8 /* Coordinator.swift */,
+				B4E471FD2880496500CAE4B8 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B4E4720028804AC200CAE4B8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B4E471CA2880420B00CAE4B8 /* AppDelegate.swift */,
+				B4E471CC2880420B00CAE4B8 /* SceneDelegate.swift */,
+				B4E471D82880420C00CAE4B8 /* Info.plist */,
+				B4E4720628804F0200CAE4B8 /* Kiliaro-debug.xcconfig */,
+				B4E4720728804F0E00CAE4B8 /* Kiliaro-release.xcconfig */,
+				B4E471D52880420C00CAE4B8 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B4E4720128804AFB00CAE4B8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B4E471D32880420C00CAE4B8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B4E4720328804E9400CAE4B8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B4E4720428804EAD00CAE4B8 /* BuildConfigs.swift */,
+				B44F4492288066F3008F24C9 /* Theme */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +350,6 @@
 			files = (
 				B4E471D72880420C00CAE4B8 /* LaunchScreen.storyboard in Resources */,
 				B4E471D42880420C00CAE4B8 /* Assets.xcassets in Resources */,
-				B4E471D22880420B00CAE4B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +374,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E471CF2880420B00CAE4B8 /* ViewController.swift in Sources */,
+				B44F448F288063A3008F24C9 /* ShareListView.swift in Sources */,
+				B4E471FC2880444200CAE4B8 /* Coordinator.swift in Sources */,
+				B44F449C28806A12008F24C9 /* View.swift in Sources */,
+				B44F44A328806AF2008F24C9 /* ShareListViewModel.swift in Sources */,
+				B44F4491288063BC008F24C9 /* BaseViewController.swift in Sources */,
+				B44F4498288067F1008F24C9 /* DefaultTheme.swift in Sources */,
+				B44F448A28805CAF008F24C9 /* BaseNavigation.swift in Sources */,
+				B44F44A028806A50008F24C9 /* ViewModel.swift in Sources */,
+				B4E471FE2880496500CAE4B8 /* AppCoordinator.swift in Sources */,
 				B4E471CB2880420B00CAE4B8 /* AppDelegate.swift in Sources */,
+				B4E4720528804EAD00CAE4B8 /* BuildConfigs.swift in Sources */,
+				B44F449428806703008F24C9 /* Theme.swift in Sources */,
+				B44F448D28805FAA008F24C9 /* Media.swift in Sources */,
 				B4E471CD2880420B00CAE4B8 /* SceneDelegate.swift in Sources */,
+				B44F449A28806889008F24C9 /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +425,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B4E471D02880420B00CAE4B8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B4E471D12880420B00CAE4B8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B4E471D52880420C00CAE4B8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,16 +552,17 @@
 		};
 		B4E471F22880420D00CAE4B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4E4720628804F0200CAE4B8 /* Kiliaro-debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Kiliaro/Info.plist;
+				INFOPLIST_FILE = Kiliaro/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -453,22 +574,23 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B4E471F32880420D00CAE4B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4E4720728804F0E00CAE4B8 /* Kiliaro-release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Kiliaro/Info.plist;
+				INFOPLIST_FILE = Kiliaro/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -480,7 +602,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
