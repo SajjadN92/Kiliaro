@@ -59,9 +59,17 @@ extension String {
     
 }
 
+extension URL {
+    func appending(_ queryItem: String, value: String?) -> URL {
+        guard var urlComponents = URLComponents(string: absoluteString) else {
+            return absoluteURL
+        }
 
-extension UIImage {
-    
-    
-    
+        var queryItems: [URLQueryItem] = urlComponents.queryItems ?? []
+        let queryItem = URLQueryItem(name: queryItem, value: value)
+
+        queryItems.append(queryItem)
+        urlComponents.queryItems = queryItems
+        return urlComponents.url!
+    }
 }

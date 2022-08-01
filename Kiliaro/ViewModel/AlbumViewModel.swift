@@ -30,6 +30,11 @@ class AlbumViewModel: ViewModel {
         return items.count
     }
     
+    func getImage(for index: Int) -> URL {
+        let url = items[index].thumbnail_url.appending("w", value: "\(Int(getImageSize(for: index).width))")
+        return url
+    }
+    
     func getImageSize(for index: Int) -> CGSize {
         let width = (UIScreen.main.bounds.width -
                      AlbumCollectionViewLayout.inset.left -

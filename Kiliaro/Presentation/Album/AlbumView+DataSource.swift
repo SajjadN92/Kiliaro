@@ -14,7 +14,7 @@ extension AlbumView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.reuse(AlbumCollectionViewCell.self, indexPath)
-        
+        cell.imageUrl = viewModel.getImage(for: indexPath.row)
         return cell
     }
 }

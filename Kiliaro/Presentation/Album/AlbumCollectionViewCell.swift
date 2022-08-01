@@ -6,13 +6,21 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AlbumCollectionViewCell: UICollectionViewCell {
+    
+    var imageUrl: URL! {
+        didSet {
+            imageView.kf.setImage(with: imageUrl)
+        }
+    }
     
     lazy var imageView: UIImageView = {
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.layer.cornerRadius = 5
+        iv.clipsToBounds = true
         iv.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
         return iv
     }()
@@ -28,7 +36,6 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     }
     
     func commonInit() {
-        
         contentView.addSubview(imageView)
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
