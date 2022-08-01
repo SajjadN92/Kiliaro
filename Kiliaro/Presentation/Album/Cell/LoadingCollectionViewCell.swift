@@ -12,6 +12,7 @@ class LoadingCollectionViewCell: UICollectionViewCell {
     lazy var activityIndicator: UIActivityIndicatorView = {
         let activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
         activityView.translatesAutoresizingMaskIntoConstraints = false
+        activityView.hidesWhenStopped = false
         activityView.startAnimating()
         activityView.color = ThemeManager.currentTheme.textColor
         return activityView

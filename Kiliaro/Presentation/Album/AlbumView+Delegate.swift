@@ -10,7 +10,7 @@ import UIKit
 extension AlbumView: UICollectionViewDelegate, CustomLayoutDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        viewModel.mediaTapped(at: indexPath.row)
     }
 
     func sizeFor(index: Int) -> CGSize {

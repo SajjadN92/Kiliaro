@@ -27,7 +27,14 @@ class AppCoordinator: Coordinator {
     
     func navigateToAlbum(with id: String) {
         let viewModel = AlbumViewModel(album: id)
+        viewModel.coordinator = self
         let viewController = AlbumView(viewModel: viewModel)
+        navigation?.pushViewController(viewController, animated: true)
+    }
+    
+    func navigateToMedia(with item: Media) {
+        let viewModel = MediaViewModel(media: item)
+        let viewController = MediaView(viewModel: viewModel)
         navigation?.pushViewController(viewController, animated: true)
     }
 }

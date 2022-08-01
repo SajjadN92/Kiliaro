@@ -9,6 +9,7 @@ import Foundation
 
 protocol AlbumUseCaseable: BaseUseCase {
     func getMedia(for album: String) async throws -> [Media]
+    func invalidateCacheAndGetMedia(for album: String) async throws -> [Media]
 }
 
 class AlbumUseCase: AlbumUseCaseable {
@@ -35,6 +36,10 @@ class AlbumUseCase: AlbumUseCaseable {
         }
     }
     
+    func invalidateCacheAndGetMedia(for album: String) async throws -> [Media] {
+        try? await repository.deleteCache()
+        return try await getMedia(for: album)
+    }
 }
 
 

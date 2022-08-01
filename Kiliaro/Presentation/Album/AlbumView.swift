@@ -24,6 +24,13 @@ class AlbumView: BaseViewController, View {
         return cv
     }()
     
+    lazy var redoButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(systemItem: .refresh)
+        button.target = self
+        button.action = #selector(redoTapped)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +42,7 @@ class AlbumView: BaseViewController, View {
     
     override func addSubviews() {
         view.addSubview(albumCollectionView)
+        navigationItem.rightBarButtonItem = redoButton
     }
     
     override func setupConstraints() {
@@ -49,5 +57,9 @@ class AlbumView: BaseViewController, View {
     override func configViewController() {
         super.configViewController()
         title = viewModel.album
+    }
+    
+    @objc private func redoTapped() {
+        viewModel.redoTapped()
     }
 }

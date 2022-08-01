@@ -31,6 +31,8 @@
 		B429375428985A630000CC8E /* MediaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429375328985A630000CC8E /* MediaEntity.swift */; };
 		B4293757289864270000CC8E /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4293756289864270000CC8E /* LoadingCollectionViewCell.swift */; };
 		B4293759289864390000CC8E /* ErrorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4293758289864390000CC8E /* ErrorCollectionViewCell.swift */; };
+		B429375C289881270000CC8E /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429375B289881270000CC8E /* MediaView.swift */; };
+		B429375E289881310000CC8E /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429375D289881310000CC8E /* MediaViewModel.swift */; };
 		B44F448A28805CAF008F24C9 /* BaseNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F448928805CAF008F24C9 /* BaseNavigation.swift */; };
 		B44F448D28805FAA008F24C9 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F448C28805FAA008F24C9 /* Media.swift */; };
 		B44F448F288063A3008F24C9 /* ShareListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F448E288063A3008F24C9 /* ShareListView.swift */; };
@@ -98,6 +100,8 @@
 		B429375328985A630000CC8E /* MediaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaEntity.swift; sourceTree = "<group>"; };
 		B4293756289864270000CC8E /* LoadingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionViewCell.swift; sourceTree = "<group>"; };
 		B4293758289864390000CC8E /* ErrorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCollectionViewCell.swift; sourceTree = "<group>"; };
+		B429375B289881270000CC8E /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
+		B429375D289881310000CC8E /* MediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewModel.swift; sourceTree = "<group>"; };
 		B44F448928805CAF008F24C9 /* BaseNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigation.swift; sourceTree = "<group>"; };
 		B44F448C28805FAA008F24C9 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		B44F448E288063A3008F24C9 /* ShareListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareListView.swift; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 		B429371F2897D5310000CC8E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B429375A2898810D0000CC8E /* Media */,
 				B42937372897E5E80000CC8E /* Album */,
 				B42937362897E5DD0000CC8E /* ShareList */,
 				B44F448828805CA1008F24C9 /* Base */,
@@ -265,6 +270,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		B429375A2898810D0000CC8E /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				B429375B289881270000CC8E /* MediaView.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		B44F448828805CA1008F24C9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +310,7 @@
 			children = (
 				B44F44A228806AF2008F24C9 /* ShareListViewModel.swift */,
 				B429373A2897E6680000CC8E /* AlbumViewModel.swift */,
+				B429375D289881310000CC8E /* MediaViewModel.swift */,
 				B44F449E28806A3C008F24C9 /* Base */,
 			);
 			path = ViewModel;
@@ -579,7 +593,9 @@
 				B429373D2897F5390000CC8E /* AlbumCollectionViewCell.swift in Sources */,
 				B42937312897E3370000CC8E /* AlbumCache.swift in Sources */,
 				B4E471CD2880420B00CAE4B8 /* SceneDelegate.swift in Sources */,
+				B429375C289881270000CC8E /* MediaView.swift in Sources */,
 				B42937452897FD7E0000CC8E /* AlbumView+DataSource.swift in Sources */,
+				B429375E289881310000CC8E /* MediaViewModel.swift in Sources */,
 				B42937432897FD720000CC8E /* AlbumView+Delegate.swift in Sources */,
 				B429372C2897E2250000CC8E /* BaseDataStore.swift in Sources */,
 				B44F449A28806889008F24C9 /* ThemeManager.swift in Sources */,

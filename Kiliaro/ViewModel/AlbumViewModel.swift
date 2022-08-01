@@ -8,6 +8,7 @@
 import UIKit
 
 class AlbumViewModel: ViewModel {
+    weak var coordinator: AppCoordinator?
     var useCase: AlbumUseCaseable
     var album: String
     var onReload: (() -> Void)?
@@ -61,6 +62,15 @@ class AlbumViewModel: ViewModel {
     private func changeState(to newState: ViewState) {
         state = newState
         onReload?()
+    }
+    
+    func mediaTapped(at index: Int) {
+        coordinator?.navigateToMedia(with: items[index])
+    }
+    
+    func redoTapped() {
+        changeState(to: .loading)
+        getAlbums()
     }
 }
 
