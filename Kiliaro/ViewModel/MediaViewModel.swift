@@ -11,7 +11,7 @@ import Kingfisher
 class MediaViewModel: ViewModel {
     var onStateChange: ((ViewState) -> Void)?
     private var item: Media
-    private var state = ViewState.loading
+    private(set) var state = ViewState.loading
     
     var date: String {
         let dateFormatter = DateFormatter()

@@ -53,7 +53,6 @@
 		B4E471D72880420C00CAE4B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E471D52880420C00CAE4B8 /* LaunchScreen.storyboard */; };
 		B4E471E22880420D00CAE4B8 /* KiliaroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471E12880420D00CAE4B8 /* KiliaroTests.swift */; };
 		B4E471EC2880420D00CAE4B8 /* KiliaroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471EB2880420D00CAE4B8 /* KiliaroUITests.swift */; };
-		B4E471EE2880420D00CAE4B8 /* KiliaroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471ED2880420D00CAE4B8 /* KiliaroUITestsLaunchTests.swift */; };
 		B4E471FC2880444200CAE4B8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471FB2880444200CAE4B8 /* Coordinator.swift */; };
 		B4E471FE2880496500CAE4B8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E471FD2880496500CAE4B8 /* AppCoordinator.swift */; };
 		B4E4720528804EAD00CAE4B8 /* BuildConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4720428804EAD00CAE4B8 /* BuildConfigs.swift */; };
@@ -126,7 +125,6 @@
 		B4E471E12880420D00CAE4B8 /* KiliaroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiliaroTests.swift; sourceTree = "<group>"; };
 		B4E471E72880420D00CAE4B8 /* KiliaroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiliaroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E471EB2880420D00CAE4B8 /* KiliaroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiliaroUITests.swift; sourceTree = "<group>"; };
-		B4E471ED2880420D00CAE4B8 /* KiliaroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiliaroUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B4E471FB2880444200CAE4B8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B4E471FD2880496500CAE4B8 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B4E4720428804EAD00CAE4B8 /* BuildConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfigs.swift; sourceTree = "<group>"; };
@@ -372,7 +370,6 @@
 			isa = PBXGroup;
 			children = (
 				B4E471EB2880420D00CAE4B8 /* KiliaroUITests.swift */,
-				B4E471ED2880420D00CAE4B8 /* KiliaroUITestsLaunchTests.swift */,
 			);
 			path = KiliaroUITests;
 			sourceTree = "<group>";
@@ -616,7 +613,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E471EE2880420D00CAE4B8 /* KiliaroUITestsLaunchTests.swift in Sources */,
 				B4E471EC2880420D00CAE4B8 /* KiliaroUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

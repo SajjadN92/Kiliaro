@@ -23,4 +23,13 @@ struct Media: Decodable {
         self.resy = entity.resy
         self.created_at = entity.created_at!
     }
+    
+    init(id: String, thumbnail_url: URL, download_url: URL, resx: Double, resy: Double, created_at: String) {
+        self.id = id
+        self.thumbnail_url = thumbnail_url
+        self.download_url = download_url
+        self.resx = resx
+        self.resy = resy
+        self.created_at = created_at
+    }
 }

@@ -10,27 +10,39 @@ import XCTest
 
 class KiliaroTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testMediaViewModel() {
+        let media = Media(id: "",
+                          thumbnail_url: URL(string: "https://google.com")!,
+                          download_url: URL(string: "https://google.com")!,
+                          resx: 5,
+                          resy: 12,
+                          created_at: "")
+        let mediaViewModel = MediaViewModel(media: media)
+        
+        XCTAssertEqual(mediaViewModel.date, "", "Date should be empty for invalid values")
+        mediaViewModel.setImage(on: UIImageView())
+        XCTAssertEqual(mediaViewModel.state, ViewState.loading, "state should change to loading")
+    }
+    
+    func testAlbumViewModel() {
+        let albumViewModel = AlbumViewModel(album: "", useCase: TestAlbumUseCase())
+        XCTAssertEqual(albumViewModel.numberOfItems(), 1, "Number of items should be equal to 1")
+        XCTAssertEqual(albumViewModel.state, ViewState.loading, "Initial state should be loading")
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+}
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+class TestAlbumUseCase: AlbumUseCaseable {
+    func getMedia(for album: String) async throws -> [Media] {
+        return [Media(id: "",
+                      thumbnail_url: URL(string: "https://google.com")!,
+                      download_url: URL(string: "https://google.com")!,
+                      resx: 5,
+                      resy: 12,
+                      created_at: "")]
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func invalidateCacheAndGetMedia(for album: String) async throws -> [Media] {
+        return []
     }
-
 }
