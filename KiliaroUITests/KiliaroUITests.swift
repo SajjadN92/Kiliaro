@@ -15,10 +15,27 @@ class KiliaroUITests: XCTestCase {
         app.launch()
     }
 
-    func testShowAlbums() {
-        XCTAssertTrue(app.cells.firstMatch.waitForExistence(timeout: 5.0), "Album should load!")
-        XCTAssertEqual(app.cells.firstMatch.staticTexts.firstMatch.label, "djlCbGusTJamg_ca4axEVw", "Album name is incorrect.")
+    func testShowShareList() {
+        XCTAssertTrue(app.cells.firstMatch.waitForExistence(timeout: 5.0), "Share List should load!")
+        XCTAssertEqual(app.cells.firstMatch.staticTexts.firstMatch.label, "djlCbGusTJamg_ca4axEVw", "Share list name is incorrect.")
     }
 
+    func testPresentAlbum() {
+        testShowShareList()
+        app.cells.firstMatch.tap()
+        XCTAssertTrue(app.images.firstMatch.waitForExistence(timeout: 10.0), "Album cells should load")
+    }
     
+    func testPresentMedia() {
+        testPresentAlbum()
+        app.cells.firstMatch.tap()
+        XCTAssertTrue(app.images.firstMatch.waitForExistence(timeout: 15.0), "Album cells should load")
+    }
+    
+    func testAlbumReloadExist() {
+        testPresentAlbum()
+        wait(for: [], timeout: 10.0)
+        XCTAssertTrue(app.navigationBars.firstMatch.buttons.element(boundBy: 1).exists, "Album reload button not found.")
+        app.navigationBars.firstMatch.buttons.element(boundBy: 1).tap()
+    }
 }
