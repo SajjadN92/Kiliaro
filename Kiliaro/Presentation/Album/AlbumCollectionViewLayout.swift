@@ -27,8 +27,9 @@ class AlbumCollectionViewLayout: UICollectionViewFlowLayout {
         contentSize = .zero
         cache.removeAll()
         
-        var leftY: CGFloat = 0
-        var rightY: CGFloat = 0
+        var firstColumn: CGFloat = 0
+        var secondColumn: CGFloat = 0
+        var thirdColumn: CGFloat = 0
         
         contentSize.width = collectionView.frame.width
         let numberOfItems = collectionView.numberOfItems(inSection: 0)
@@ -38,14 +39,18 @@ class AlbumCollectionViewLayout: UICollectionViewFlowLayout {
             var frame = CGRect.zero
             frame.size = itemSize
 
-            if leftY <= rightY {
+            if firstColumn <= secondColumn && firstColumn <= thirdColumn {
                 frame.origin.x = AlbumCollectionViewLayout.inset.left
-                frame.origin.y = leftY + AlbumCollectionViewLayout.verticalSpacing
-                leftY += itemSize.height + AlbumCollectionViewLayout.verticalSpacing
-            } else {
+                frame.origin.y = firstColumn + AlbumCollectionViewLayout.verticalSpacing
+                firstColumn += itemSize.height + AlbumCollectionViewLayout.verticalSpacing
+            } else if secondColumn <= firstColumn && secondColumn <= thirdColumn {
                 frame.origin.x = AlbumCollectionViewLayout.inset.left + AlbumCollectionViewLayout.horizontalSpacing + itemSize.width
-                frame.origin.y = rightY + AlbumCollectionViewLayout.verticalSpacing
-                rightY += itemSize.height + AlbumCollectionViewLayout.verticalSpacing
+                frame.origin.y = secondColumn + AlbumCollectionViewLayout.verticalSpacing
+                secondColumn += itemSize.height + AlbumCollectionViewLayout.verticalSpacing
+            } else {
+                frame.origin.x = AlbumCollectionViewLayout.inset.left + (AlbumCollectionViewLayout.horizontalSpacing + itemSize.width) * 2
+                frame.origin.y = thirdColumn + AlbumCollectionViewLayout.verticalSpacing
+                thirdColumn += itemSize.height + AlbumCollectionViewLayout.verticalSpacing
             }
             
             contentSize.height = max(frame.maxY + AlbumCollectionViewLayout.inset.bottom , contentSize.height)

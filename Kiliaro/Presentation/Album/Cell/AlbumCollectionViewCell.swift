@@ -40,7 +40,7 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     lazy var sizeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = ThemeManager.currentTheme.buttonBgColor
+        label.backgroundColor = ThemeManager.currentTheme.buttonBgColor.withAlphaComponent(0.5)
         label.textColor = ThemeManager.currentTheme.buttonTextColor
         label.textAlignment = .center
         label.isHidden = true
