@@ -9,6 +9,7 @@ import UIKit
 
 class ShareListViewModel: ViewModel {
     private var shareList = ["djlCbGusTJamg_ca4axEVw"]
+    weak var coordinator: AppCoordinator?
     
     func numberOfTableRows() -> Int {
         return shareList.count
@@ -30,6 +31,6 @@ class ShareListViewModel: ViewModel {
     }
     
     func tableRowSelected(at index: Int) {
-        
+        coordinator?.navigateToAlbum(with: shareList[index])
     }
 }

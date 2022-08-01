@@ -19,6 +19,14 @@ extension UITableViewCell {
     
 }
 
+extension UICollectionViewCell {
+    
+    static var reuseIdentifier: String {
+        String(describing: self)
+    }
+    
+}
+
 extension UITableView {
         
     func register<T: UITableViewCell>(_ type: T.Type) {
@@ -27,6 +35,18 @@ extension UITableView {
 
     func reuse<T: UITableViewCell>(_ type: T.Type, _ indexPath: IndexPath) -> T {
         dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as! T
+    }
+    
+}
+
+extension UICollectionView {
+    
+    func register<T: UICollectionViewCell>(_ type: T.Type) {
+        register(T.self, forCellWithReuseIdentifier: T.reuseIdentifier)
+    }
+
+    func reuse<T: UICollectionViewCell>(_ type: T.Type, _ indexPath: IndexPath) -> T {
+        dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as! T
     }
     
 }

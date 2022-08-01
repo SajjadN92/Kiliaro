@@ -10,6 +10,7 @@ import UIKit
 class AppCoordinator: Coordinator {
     var childs: [Coordinator] = []
     var window: UIWindow?
+    var navigation: BaseNavigation?
     
     init(window: UIWindow?) {
         self.window = window
@@ -17,11 +18,16 @@ class AppCoordinator: Coordinator {
     
     func start() {
         let viewModel = ShareListViewModel()
+        viewModel.coordinator = self
         let shareList = ShareListView(viewModel: viewModel)
-        let navigation = BaseNavigation(rootViewController: shareList)
-        window?.rootViewController = navigation
+        navigation = BaseNavigation(rootViewController: shareList)
+        window?.rootViewController = navigation!
         window?.makeKeyAndVisible()
     }
     
-    
+    func navigateToAlbum(with id: String) {
+        let viewModel = AlbumViewModel(album: id)
+        let viewController = AlbumView(viewModel: viewModel)
+        navigation?.pushViewController(viewController, animated: true)
+    }
 }
