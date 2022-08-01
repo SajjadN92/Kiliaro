@@ -19,8 +19,7 @@ class AlbumCollectionViewLayout: UICollectionViewFlowLayout {
     
     override func prepare() {
         guard let layoutDelegate = layoutDelegate,
-              let collectionView = collectionView,
-              cache.isEmpty else {
+              let collectionView = collectionView else {
             return
         }
         

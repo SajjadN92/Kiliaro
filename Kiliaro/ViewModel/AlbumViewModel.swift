@@ -13,6 +13,7 @@ class AlbumViewModel: ViewModel {
     var onReload: (() -> Void)?
     
     private var items = [Media]()
+    private(set) var state = ViewState.loading
     
     init(album: String, useCase: AlbumUseCaseable = AlbumUseCase()) {
         self.album = album
@@ -21,13 +22,18 @@ class AlbumViewModel: ViewModel {
     
     func getAlbums() {
         Task { @MainActor in
-            self.items = try! await useCase.getMedia(for: album)
-            self.onReload?()
+            self.changeState(to: .loading)
+            do {
+                self.items = try await useCase.getMedia(for: album)
+                self.changeState(to: .data)
+            } catch {
+                self.changeState(to: .error)
+            }
         }
     }
     
     func numberOfItems() -> Int {
-        return items.count
+        return state == .data ? items.count : 1
     }
     
     func getImage(for index: Int) -> URL {
@@ -36,13 +42,31 @@ class AlbumViewModel: ViewModel {
     }
     
     func getImageSize(for index: Int) -> CGSize {
-        let width = (UIScreen.main.bounds.width -
-                     AlbumCollectionViewLayout.inset.left -
-                     AlbumCollectionViewLayout.inset.right -
-                     AlbumCollectionViewLayout.verticalSpacing) / 2
-        let item = items[index]
-        let targetHeight = item.resy * width / item.resx
+        switch state {
+        case .data:
+            let width = (UIScreen.main.bounds.width -
+                         AlbumCollectionViewLayout.inset.left -
+                         AlbumCollectionViewLayout.inset.right -
+                         AlbumCollectionViewLayout.verticalSpacing) / 2
+            let item = items[index]
+            let targetHeight = item.resy * width / item.resx
+            
+            return CGSize(width: width, height: targetHeight)
+        default:
+            return CGSize(width: UIScreen.main.bounds.width, height: 250)
+        }
         
-        return CGSize(width: width, height: targetHeight)
     }
+    
+    private func changeState(to newState: ViewState) {
+        state = newState
+        onReload?()
+    }
+}
+
+
+enum ViewState {
+    case loading
+    case error
+    case data
 }

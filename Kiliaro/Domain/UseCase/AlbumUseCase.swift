@@ -26,7 +26,12 @@ class AlbumUseCase: AlbumUseCaseable {
             try? await repository.save(media: remoteMedia, for: album)
             return remoteMedia
         } catch {
-            return try await repository.getCacheMedia(for: album)
+            let cacheMedia = try await repository.getCacheMedia(for: album)
+            if cacheMedia.isEmpty {
+                throw CacheError.fetchError
+            } else {
+                return cacheMedia
+            }
         }
     }
     

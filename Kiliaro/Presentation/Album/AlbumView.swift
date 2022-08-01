@@ -17,6 +17,8 @@ class AlbumView: BaseViewController, View {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.register(AlbumCollectionViewCell.self)
+        cv.register(ErrorCollectionViewCell.self)
+        cv.register(LoadingCollectionViewCell.self)
         cv.delegate = self
         cv.dataSource = self
         return cv

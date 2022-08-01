@@ -7,3 +7,5 @@
 */
 
 "shared_items" = "shared items";
+"general_error" = "Something went wrong";
+"retry" = "retry";

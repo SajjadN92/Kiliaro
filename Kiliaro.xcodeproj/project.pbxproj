@@ -29,6 +29,8 @@
 		B4293750289824510000CC8E /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429374F289824510000CC8E /* CoreDataStore.swift */; };
 		B4293752289826050000CC8E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4293751289826050000CC8E /* CoreDataStack.swift */; };
 		B429375428985A630000CC8E /* MediaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429375328985A630000CC8E /* MediaEntity.swift */; };
+		B4293757289864270000CC8E /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4293756289864270000CC8E /* LoadingCollectionViewCell.swift */; };
+		B4293759289864390000CC8E /* ErrorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4293758289864390000CC8E /* ErrorCollectionViewCell.swift */; };
 		B44F448A28805CAF008F24C9 /* BaseNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F448928805CAF008F24C9 /* BaseNavigation.swift */; };
 		B44F448D28805FAA008F24C9 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F448C28805FAA008F24C9 /* Media.swift */; };
 		B44F448F288063A3008F24C9 /* ShareListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F448E288063A3008F24C9 /* ShareListView.swift */; };
@@ -94,6 +96,8 @@
 		B429374F289824510000CC8E /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
 		B4293751289826050000CC8E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B429375328985A630000CC8E /* MediaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaEntity.swift; sourceTree = "<group>"; };
+		B4293756289864270000CC8E /* LoadingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionViewCell.swift; sourceTree = "<group>"; };
+		B4293758289864390000CC8E /* ErrorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCollectionViewCell.swift; sourceTree = "<group>"; };
 		B44F448928805CAF008F24C9 /* BaseNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigation.swift; sourceTree = "<group>"; };
 		B44F448C28805FAA008F24C9 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		B44F448E288063A3008F24C9 /* ShareListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareListView.swift; sourceTree = "<group>"; };
@@ -255,6 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				B429373C2897F5390000CC8E /* AlbumCollectionViewCell.swift */,
+				B4293756289864270000CC8E /* LoadingCollectionViewCell.swift */,
+				B4293758289864390000CC8E /* ErrorCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -561,8 +567,10 @@
 				B4E471FE2880496500CAE4B8 /* AppCoordinator.swift in Sources */,
 				B4E471CB2880420B00CAE4B8 /* AppDelegate.swift in Sources */,
 				B4E4720528804EAD00CAE4B8 /* BuildConfigs.swift in Sources */,
+				B4293757289864270000CC8E /* LoadingCollectionViewCell.swift in Sources */,
 				B429372E2897E2750000CC8E /* AlbumDataStore.swift in Sources */,
 				B42937252897D9E70000CC8E /* NetworkError.swift in Sources */,
+				B4293759289864390000CC8E /* ErrorCollectionViewCell.swift in Sources */,
 				B44F449428806703008F24C9 /* Theme.swift in Sources */,
 				B42937292897E1A30000CC8E /* BaseCache.swift in Sources */,
 				B44F448D28805FAA008F24C9 /* Media.swift in Sources */,
