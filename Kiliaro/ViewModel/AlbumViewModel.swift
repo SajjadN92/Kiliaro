@@ -41,7 +41,7 @@ class AlbumViewModel: ViewModel {
                      AlbumCollectionViewLayout.inset.right -
                      AlbumCollectionViewLayout.verticalSpacing) / 2
         let item = items[index]
-        let targetHeight = item.resx * width / item.resy
+        let targetHeight = item.resy * width / item.resx
         
         return CGSize(width: width, height: targetHeight)
     }
