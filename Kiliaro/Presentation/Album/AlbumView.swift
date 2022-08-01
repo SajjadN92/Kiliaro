@@ -12,7 +12,9 @@ class AlbumView: BaseViewController, View {
     var viewModel: AlbumViewModel!
     
     lazy var albumCollectionView: UICollectionView = {
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        let layout = AlbumCollectionViewLayout()
+        layout.layoutDelegate = self
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.register(AlbumCollectionViewCell.self)
         cv.delegate = self
@@ -23,10 +25,10 @@ class AlbumView: BaseViewController, View {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.getAlbums()
         viewModel.onReload = { [weak self] in
             self?.albumCollectionView.reloadData()
         }
+        viewModel.getAlbums()
     }
     
     override func addSubviews() {
