@@ -25,6 +25,10 @@
 		B42937452897FD7E0000CC8E /* AlbumView+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42937442897FD7E0000CC8E /* AlbumView+DataSource.swift */; };
 		B429374828980E9A0000CC8E /* AlbumCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429374728980E990000CC8E /* AlbumCollectionViewLayout.swift */; };
 		B429374B28981C990000CC8E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B429374A28981C990000CC8E /* Kingfisher */; };
+		B429374E289822F50000CC8E /* Kiliaro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B429374C289822F50000CC8E /* Kiliaro.xcdatamodeld */; };
+		B4293750289824510000CC8E /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429374F289824510000CC8E /* CoreDataStore.swift */; };
+		B4293752289826050000CC8E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4293751289826050000CC8E /* CoreDataStack.swift */; };
+		B429375428985A630000CC8E /* MediaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429375328985A630000CC8E /* MediaEntity.swift */; };
 		B44F448A28805CAF008F24C9 /* BaseNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F448928805CAF008F24C9 /* BaseNavigation.swift */; };
 		B44F448D28805FAA008F24C9 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F448C28805FAA008F24C9 /* Media.swift */; };
 		B44F448F288063A3008F24C9 /* ShareListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F448E288063A3008F24C9 /* ShareListView.swift */; };
@@ -86,6 +90,10 @@
 		B42937422897FD720000CC8E /* AlbumView+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumView+Delegate.swift"; sourceTree = "<group>"; };
 		B42937442897FD7E0000CC8E /* AlbumView+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumView+DataSource.swift"; sourceTree = "<group>"; };
 		B429374728980E990000CC8E /* AlbumCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewLayout.swift; sourceTree = "<group>"; };
+		B429374D289822F50000CC8E /* Kiliaro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kiliaro.xcdatamodel; sourceTree = "<group>"; };
+		B429374F289824510000CC8E /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		B4293751289826050000CC8E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		B429375328985A630000CC8E /* MediaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaEntity.swift; sourceTree = "<group>"; };
 		B44F448928805CAF008F24C9 /* BaseNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigation.swift; sourceTree = "<group>"; };
 		B44F448C28805FAA008F24C9 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		B44F448E288063A3008F24C9 /* ShareListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareListView.swift; sourceTree = "<group>"; };
@@ -197,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				B44F448C28805FAA008F24C9 /* Media.swift */,
+				B429375328985A630000CC8E /* MediaEntity.swift */,
 				B42937242897D9E70000CC8E /* NetworkError.swift */,
 			);
 			path = Model;
@@ -236,10 +245,18 @@
 				B42937382897E63A0000CC8E /* AlbumView.swift */,
 				B42937422897FD720000CC8E /* AlbumView+Delegate.swift */,
 				B42937442897FD7E0000CC8E /* AlbumView+DataSource.swift */,
-				B429373C2897F5390000CC8E /* AlbumCollectionViewCell.swift */,
 				B429374728980E990000CC8E /* AlbumCollectionViewLayout.swift */,
+				B4293755289863D70000CC8E /* Cell */,
 			);
 			path = Album;
+			sourceTree = "<group>";
+		};
+		B4293755289863D70000CC8E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B429373C2897F5390000CC8E /* AlbumCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		B44F448828805CA1008F24C9 /* Base */ = {
@@ -367,6 +384,7 @@
 			children = (
 				B4E471D32880420C00CAE4B8 /* Assets.xcassets */,
 				B44F44B42880A26E008F24C9 /* Localizable.strings */,
+				B429374C289822F50000CC8E /* Kiliaro.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -377,6 +395,8 @@
 				B44F4492288066F3008F24C9 /* Theme */,
 				B4E4720428804EAD00CAE4B8 /* BuildConfigs.swift */,
 				B44F44A828808EDE008F24C9 /* Extensions.swift */,
+				B429374F289824510000CC8E /* CoreDataStore.swift */,
+				B4293751289826050000CC8E /* CoreDataStack.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -522,6 +542,7 @@
 				B44F44A928808EDE008F24C9 /* Extensions.swift in Sources */,
 				B4E471FC2880444200CAE4B8 /* Coordinator.swift in Sources */,
 				B42937352897E46E0000CC8E /* BaseRepository.swift in Sources */,
+				B4293750289824510000CC8E /* CoreDataStore.swift in Sources */,
 				B44F449C28806A12008F24C9 /* View.swift in Sources */,
 				B42937212897D7140000CC8E /* AlbumRemote.swift in Sources */,
 				B44F44A328806AF2008F24C9 /* ShareListViewModel.swift in Sources */,
@@ -529,9 +550,11 @@
 				B44F4491288063BC008F24C9 /* BaseViewController.swift in Sources */,
 				B429373F2897F8A60000CC8E /* AlbumUseCase.swift in Sources */,
 				B44F4498288067F1008F24C9 /* DefaultTheme.swift in Sources */,
+				B429374E289822F50000CC8E /* Kiliaro.xcdatamodeld in Sources */,
 				B42937392897E63A0000CC8E /* AlbumView.swift in Sources */,
 				B42937332897E42F0000CC8E /* AlbumRepository.swift in Sources */,
 				B44F448A28805CAF008F24C9 /* BaseNavigation.swift in Sources */,
+				B429375428985A630000CC8E /* MediaEntity.swift in Sources */,
 				B44F44A528808C6F008F24C9 /* ShareListView+Delegate.swift in Sources */,
 				B44F44A028806A50008F24C9 /* ViewModel.swift in Sources */,
 				B42937412897F8CD0000CC8E /* BaseUseCase.swift in Sources */,
@@ -543,6 +566,7 @@
 				B44F449428806703008F24C9 /* Theme.swift in Sources */,
 				B42937292897E1A30000CC8E /* BaseCache.swift in Sources */,
 				B44F448D28805FAA008F24C9 /* Media.swift in Sources */,
+				B4293752289826050000CC8E /* CoreDataStack.swift in Sources */,
 				B429373B2897E6680000CC8E /* AlbumViewModel.swift in Sources */,
 				B429373D2897F5390000CC8E /* AlbumCollectionViewCell.swift in Sources */,
 				B42937312897E3370000CC8E /* AlbumCache.swift in Sources */,
@@ -909,6 +933,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B429374C289822F50000CC8E /* Kiliaro.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B429374D289822F50000CC8E /* Kiliaro.xcdatamodel */,
+			);
+			currentVersion = B429374D289822F50000CC8E /* Kiliaro.xcdatamodel */;
+			path = Kiliaro.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B4E471BF2880420B00CAE4B8 /* Project object */;
 }

@@ -21,7 +21,10 @@ class AlbumUseCase: AlbumUseCaseable {
     
     func getMedia(for album: String) async throws -> [Media] {
         do {
-            return try await repository.getRemoteMedia(for: album)
+            let remoteMedia = try await repository.getRemoteMedia(for: album)
+            try? await repository.deleteCache()
+            try? await repository.save(media: remoteMedia, for: album)
+            return remoteMedia
         } catch {
             return try await repository.getCacheMedia(for: album)
         }

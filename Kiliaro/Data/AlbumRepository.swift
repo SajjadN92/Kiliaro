@@ -12,6 +12,8 @@ protocol AlbumRepositoryable: BaseRepository {
     
     func getCacheMedia(for album: String) async throws -> [Media]
     func getRemoteMedia(for album: String) async throws -> [Media]
+    func deleteCache() async throws
+    func save(media: [Media], for album: String) async throws
 }
 
 class AlbumRepository: AlbumRepositoryable {
@@ -27,5 +29,13 @@ class AlbumRepository: AlbumRepositoryable {
     
     func getRemoteMedia(for album: String) async throws -> [Media] {
         return try await dataFactory.remote.getMedia(for: album)
+    }
+    
+    func deleteCache() async throws {
+        return try await dataFactory.cache.deleteAll()
+    }
+    
+    func save(media: [Media], for album: String) async throws {
+        try await dataFactory.cache.save(media: media, for: album)
     }
 }

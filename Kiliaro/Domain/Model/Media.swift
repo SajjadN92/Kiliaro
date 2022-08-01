@@ -13,4 +13,14 @@ struct Media: Decodable {
     let download_url: URL
     let resx: Double
     let resy: Double
+    let created_at: String
+    
+    init(entity: MediaEntity) {
+        self.id = entity.id!
+        self.thumbnail_url = URL(string: entity.thumbnail_url!)!
+        self.download_url = URL(string: entity.download_url!)!
+        self.resx = entity.resx
+        self.resy = entity.resy
+        self.created_at = entity.created_at!
+    }
 }

@@ -18,8 +18,9 @@ class AlbumRemote: AlbumRemoteable {
             throw NetworkError.urlError
         }
         
+        URLSession.shared.configuration.timeoutIntervalForRequest = 5
+        URLSession.shared.configuration.timeoutIntervalForResource = 5
         let response = try await URLSession.shared.data(from: url)
-        
         guard let media: [Media] = try? decode(data: response.0) else {
             throw NetworkError.decodeError
         }
