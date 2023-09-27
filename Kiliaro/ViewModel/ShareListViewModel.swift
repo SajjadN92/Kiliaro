@@ -8,7 +8,7 @@
 import UIKit
 
 class ShareListViewModel: ViewModel {
-    private var shareList = ["djlCbGusTJamg_ca4axEVw"]
+    private var shareList = [""]
     weak var coordinator: AppCoordinator?
     
     func numberOfTableRows() -> Int {
